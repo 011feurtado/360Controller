@@ -3,7 +3,7 @@
 # into the build directory. Clearly this is sub-optimal and will be fixed ASAP.
 
 cd build
-
+sudo chown -R root:wheel *
 pkgbuild --root 360Controller 360Controller.pkg
 pkgbuild --root Pref360Control Pref360Control.pkg
 pkgbuild --root Wireless360Controller Wireless360Controller.pkg
