@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="360controller : Updated driver for wired &amp; wireless Xbox 360 Controllers for Mac OS X 10.10.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>360controller</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sluzynsk/360Controller">View on GitHub</a>
+
+          <h1 id="project_title">360controller</h1>
+          <h2 id="project_tagline">Updated driver for wired &amp; wireless Xbox 360 Controllers for Mac OS X 10.10.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sluzynsk/360Controller/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sluzynsk/360Controller/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="xbox-360-controller-driver-for-mac-os-x" class="anchor" href="#xbox-360-controller-driver-for-mac-os-x"><span class="octicon octicon-link"></span></a>XBox 360 Controller driver for Mac OS X</h1>
+
+<p>Copyright (C) 2006-2013 Colin Munro
+Copyright (C) 2014 Steve Luzynski</p>
+
+<p>Project repo: <a href="https://github.com/sluzynsk/360Controller">https://github.com/sluzynsk/360Controller</a>
+More Info at: <a href="http://www.luzynski.com">http://www.luzynski.com</a></p>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>This driver supports the Microsoft Xbox 360 controller, including access to rumble motors and LEDs, 
+on the Mac OS X platform. It includes a plugin for the Apple Force Feedback Framework so some games 
+will be able to activate them, along with a Preference Pane with which allows you to test everything 
+is installed correctly. Both wired 360 controllers connected via USB, and wireless 360 controllers 
+connected via the Wireless Gaming Receiver for Windows, are supported.</p>
+
+<p>The driver was originally created by Colin Munro. In 2014, I contacted Colin offering my help in updating the 
+driver to run properly under Mac OS X 10.10 "Yosemite". My email went unanswered. Given that Colin has
+not updated the driver in over a year, and that he has not answered my attempts at contacting him, I have
+decided to fork the driver and update it. If Colin and I do sync up we will likely re-merge efforts;
+for now consider this version to be the definitive version for newer versions of Mac OS.</p>
+
+<p>As for why it needed updating - starting with 10.10, Apple requires that kexts (device drivers) for Mac
+follow some new rules. One of them is that they be digitally signed by a paid Mac developer. In order
+to sign the driver I needed to be able to build it; as my development machine is 10.10 based I was forced
+to update the driver to compile on 10.10. This required many changes which are outlined in the developer section below.</p>
+
+<h2>
+<a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>This driver is licensed under the GNU Public License. A copy of this license is included in the 
+distribution file, please inspect it before using the binary or source.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Simply complete the installer package to install the driver. The driver will recommend you restart - 
+if you do not, the driver will only be usable if the controller is already connected or connected 
+within a minute after the installer completes. If you are interested in installing as a developer please see below.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The driver exposes a standard game pad with a number of standard controls, so any game that supports 
+gaming devices should work. In some cases this may need an update from the manufacturer of the game or 
+a patched version. The Preference Pane uses the standard Mac OS X Frameworks for accessing HID devices 
+and accessing Force Feedback capabilities, so should be a good test that the installation is functional.</p>
+
+<h2>
+<a name="known-problemstodo" class="anchor" href="#known-problemstodo"><span class="octicon octicon-link"></span></a>Known Problems/Todo</h2>
+
+<p>Colin's last version of the driver had some functionality I have temporarily had to remove:</p>
+
+<ul>
+<li>Force feedback is currently disabled until I can rewrite it into the main driver (not a plugin). </li>
+<li>I also had to remove the feature that allowed the preference pane to rewrite the Info.plist for the driver as that cannot be allowed any longer in a signed driver.</li>
+</ul><p>This is the old Todo list. These things are still in play once I get the above issues fixed.</p>
+
+<ul>
+<li>  The rumble motor test on the triggers of the Preference Pane bypasses the Force Feedback Framework functionality, so isn't actually testing it. It really should, for completeness (and it'd help adding support for more complex effects) - this test is now disabled in the normal release anyway</li>
+<li>  Force Feedback plugin may make effects run slower (e.g. longer time) than they should</li>
+<li>  Driver probably needs to be more resilient to errors and odd cases</li>
+<li>  Better Force Feedback "emulation"</li>
+<li>  Extra settings? E.g. trigger deadzones, control remapping.</li>
+<li>  Someone has requested old Xbox Controller support too. It is unlikely that I will do this.</li>
+</ul><h2>
+<a name="developer-info" class="anchor" href="#developer-info"><span class="octicon octicon-link"></span></a>Developer info</h2>
+
+<p>Anything below this probably doesn't affect end users, so you can stop reading now if you just want to use the driver.</p>
+
+<h2>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
+
+<p>The distribution currently consists of multiple projects contained in an XCode workspace - one for the driver 
+(implemented in C++, as an I/O Kit C++ class), one for the force feedback support plugin (implemented in 
+C, as an I/O Kit COM plugin) and one for the Preference Pane (implemented in Objective C as a preference pane plugin). 
+There are additional projects for the wireless receiver. These should probably all be in a single project
+but Colin didn't start it out that way and I've not yet made that happen.</p>
+
+<p>To build, use the standard Xcode build for Deployment on each of the projects. Right now the Feedback plugin builds
+but it cannot be installed into the main controller bundle as it breaks the signature. Also, the build script 
+does not currently work and is only included for reference.</p>
+
+<h2>
+<a name="debugging" class="anchor" href="#debugging"><span class="octicon octicon-link"></span></a>Debugging</h2>
+
+<p>Most of the debugging I did was via printing out text. In 360Controller, you can use IOLog(), and the 
+output will appear in system.log. In Feedback360 normal fprintf(stderr,...), and the output will appear 
+on the console of whatever application is attempting to use Force Feedback. In Pref360Control NSLog() works 
+as it's an Objective C program, and will output to the console of the Preferences application.</p>
+
+<h2>
+<a name="other-information" class="anchor" href="#other-information"><span class="octicon octicon-link"></span></a>Other information</h2>
+
+<p>I wrote the driver from scratch, using Apple documentation and drivers simply as a reference and not 
+basing it upon any existing source. As such, some things may be done strangely or incorrectly, so excuse any 
+weirdness. I've also tried to include comments to explain generally what's going on :)</p>
+
+<p>You will be unable to install kexts you build yourself unless you have a kext signing enabled Developer ID,
+or you put your Mac into kext debugging mode - i.e. "kext-dev-mode=1". If you don't know what any of that means,
+just run the binary installer package that I provide.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">360controller maintained by <a href="https://github.com/sluzynsk">sluzynsk</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
