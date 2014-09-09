@@ -127,12 +127,12 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
         case 4:
             [leftTrigger setDoubleValue:value];
             largeMotor=value;
-//            [self testMotorsLarge:largeMotor small:smallMotor];
+            [self testMotorsLarge:largeMotor small:smallMotor];
             break;
         case 5:
             [rightTrigger setDoubleValue:value];
             smallMotor=value;
-//            [self testMotorsLarge:largeMotor small:smallMotor];
+            [self testMotorsLarge:largeMotor small:smallMotor];
             break;
         default:
             break;
@@ -286,9 +286,9 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
 - (void)stopDevice
 {
     if(registryEntry==0) return;
-//    [self testMotorsLarge:0 small:0];
-//    [self setMotorOverride:FALSE];
-//    [self updateLED:0x00];
+    [self testMotorsLarge:0 small:0];
+    [self setMotorOverride:FALSE];
+    [self updateLED:0x00];
     if(hidQueue!=NULL) {
         CFRunLoopSourceRef eventSource;
         
@@ -483,8 +483,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [self inputEnable:YES];
     // Set LED and manual motor control
     [self updateLED:0x0a];
-//    [self setMotorOverride:TRUE];
-//    [self testMotorsLarge:0 small:0];
+    [self setMotorOverride:TRUE];
+    [self testMotorsLarge:0 small:0];
     largeMotor=0;
     smallMotor=0;
     // Battery level?
