@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="com.luzynski.driver.Xbox360Controller"/>
+    <pkg-ref id="com.luzynski.driver.360Controller.Prefs"/>
+    <pkg-ref id="com.luzynski.driver.Wireless360Controller"/>
+    <pkg-ref id="com.luzynski.driver.WirelessGamingReceiver"/>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.luzynski.driver.Xbox360Controller"/>
+            <line choice="com.luzynski.driver.360Controller.Prefs"/>
+            <line choice="com.luzynski.driver.Wireless360Controller"/>
+            <line choice="com.luzynski.driver.WirelessGamingReceiver"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.luzynski.driver.Xbox360Controller" visible="false">
+        <pkg-ref id="com.luzynski.driver.Xbox360Controller"/>
+    </choice>
+    <pkg-ref id="com.luzynski.driver.Xbox360Controller" version="0" onConclusion="none">360Controller.pkg</pkg-ref>
+    <choice id="com.luzynski.driver.360Controller.Prefs" visible="false">
+        <pkg-ref id="com.luzynski.driver.360Controller.Prefs"/>
+    </choice>
+    <pkg-ref id="com.luzynski.driver.360Controller.Prefs" version="1.0.0" onConclusion="none">Pref360Control.pkg</pkg-ref>
+    <choice id="com.luzynski.driver.Wireless360Controller" visible="false">
+        <pkg-ref id="com.luzynski.driver.Wireless360Controller"/>
+    </choice>
+    <pkg-ref id="com.luzynski.driver.Wireless360Controller" version="0" onConclusion="none">Wireless360Controller.pkg</pkg-ref>
+    <choice id="com.luzynski.driver.WirelessGamingReceiver" visible="false">
+        <pkg-ref id="com.luzynski.driver.WirelessGamingReceiver"/>
+    </choice>
+    <pkg-ref id="com.luzynski.driver.WirelessGamingReceiver" version="0" onConclusion="none">WirelessGamingReceiver.pkg</pkg-ref>
+</installer-gui-script>
