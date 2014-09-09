@@ -482,7 +482,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     // Enable GUI components
     [self inputEnable:YES];
     // Set LED and manual motor control
-//    [self updateLED:0x0a];
+    [self updateLED:0x0a];
 //    [self setMotorOverride:TRUE];
 //    [self testMotorsLarge:0 small:0];
     largeMotor=0;

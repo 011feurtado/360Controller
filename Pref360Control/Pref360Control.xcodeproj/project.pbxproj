@@ -38,6 +38,7 @@
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 		E079C1B519A650D20072881B /* Pref360ControlPref.nib in Resources */ = {isa = PBXBuildFile; fileRef = E079C1B419A650D20072881B /* Pref360ControlPref.nib */; };
+		E0D2166F19BF50E2007125FF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D2166E19BF50E2007125FF /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D202CF80486D31800D8A456 /* Pref360Control.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pref360Control.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		E079C1B419A650D20072881B /* Pref360ControlPref.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Pref360ControlPref.nib; sourceTree = "<group>"; };
+		E0D2166E19BF50E2007125FF /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
 		F506C03C013D9D7901CA16C8 /* Pref360ControlPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pref360ControlPref.h; sourceTree = "<group>"; };
 		F506C03D013D9D7901CA16C8 /* Pref360ControlPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pref360ControlPref.m; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E0D2166E19BF50E2007125FF /* Media.xcassets */,
 				E079C1B419A650D20072881B /* Pref360ControlPref.nib */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				F506C040013D9D8001CA16C8 /* Pref360ControlPref.tiff */,
@@ -274,6 +277,7 @@
 			files = (
 				8D202CEE0486D31800D8A456 /* Pref360ControlPref.tiff in Resources */,
 				3B47D9ED0B93C2BF00F200B8 /* battNone.tif in Resources */,
+				E0D2166F19BF50E2007125FF /* Media.xcassets in Resources */,
 				3B47D9F20B93C31400F200B8 /* batt1.tif in Resources */,
 				E079C1B519A650D20072881B /* Pref360ControlPref.nib in Resources */,
 				3B47D9F30B93C31400F200B8 /* batt0.tif in Resources */,

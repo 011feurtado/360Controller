@@ -2,16 +2,15 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">14A329f</string>
-		<string key="IBDocument.InterfaceBuilderVersion">6206.8</string>
-		<string key="IBDocument.AppKitVersion">1331.12</string>
-		<string key="IBDocument.HIToolboxVersion">747.00</string>
+		<string key="IBDocument.SystemVersion">14A343f</string>
+		<string key="IBDocument.InterfaceBuilderVersion">6206.9</string>
+		<string key="IBDocument.AppKitVersion">1334</string>
+		<string key="IBDocument.HIToolboxVersion">751.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">6206.8</string>
+			<string key="NS.object.0">6206.9</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
-			<string>NSBox</string>
 			<string>NSButton</string>
 			<string>NSButtonCell</string>
 			<string>NSCustomObject</string>
@@ -199,7 +198,7 @@
 						<object class="NSCustomView" id="831751290">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{123, 43}, {77, 77}}</string>
+							<string key="NSFrame">{{128, 43}, {77, 77}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="259262025"/>
 							<string key="NSClassName">MyDigitalStick</string>
@@ -208,7 +207,7 @@
 						<object class="NSCustomView" id="259262025">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{226, 43}, {77, 77}}</string>
+							<string key="NSFrame">{{413, 44}, {77, 77}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="480509555"/>
 							<string key="NSClassName">MyAnalogStick</string>
@@ -217,7 +216,7 @@
 						<object class="NSCustomView" id="480509555">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{306, 117}, {77, 77}}</string>
+							<string key="NSFrame">{{498, 117}, {77, 77}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="528430124"/>
 							<string key="NSClassName">MyMainButtons</string>
@@ -226,7 +225,7 @@
 						<object class="NSCustomView" id="507865753">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{151, 141}, {126, 39}}</string>
+							<string key="NSFrame">{{234, 142}, {126, 39}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="417421942"/>
 							<string key="NSClassName">MyCentreButtons</string>
@@ -244,7 +243,7 @@
 						<object class="NSCustomView" id="63088613">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{306, 202}, {77, 18}}</string>
+							<string key="NSFrame">{{498, 202}, {77, 18}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="82694390"/>
 							<string key="NSClassName">MyShoulderButton</string>
@@ -261,8 +260,8 @@
 						</object>
 						<object class="NSProgressIndicator" id="1050460036">
 							<reference key="NSNextResponder" ref="182693741"/>
-							<int key="NSvFlags">1280</int>
-							<string key="NSFrame">{{224, 224}, {161, 20}}</string>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrame">{{414, 224}, {161, 20}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="676721950"/>
 							<int key="NSpiFlags">16392</int>
@@ -319,7 +318,7 @@
 						<object class="NSButton" id="528430124">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{309, 81}, {71, 18}}</string>
+							<string key="NSFrame">{{506, 79}, {71, 18}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="476460571"/>
 							<bool key="NSEnabled">YES</bool>
@@ -342,7 +341,7 @@
 						<object class="NSButton" id="489803090">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{309, 61}, {71, 18}}</string>
+							<string key="NSFrame">{{506, 59}, {71, 18}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="546276811"/>
 							<bool key="NSEnabled">YES</bool>
@@ -365,9 +364,9 @@
 						<object class="NSSlider" id="1022723239">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{224, 16}, {161, 21}}</string>
+							<string key="NSFrame">{{416, 16}, {161, 21}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
-							<reference key="NSNextKeyView" ref="1012678591"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="984839922">
 								<int key="NSCellFlags">67108864</int>
@@ -418,7 +417,7 @@
 						<object class="NSButton" id="546276811">
 							<reference key="NSNextResponder" ref="182693741"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{309, 41}, {64, 18}}</string>
+							<string key="NSFrame">{{506, 41}, {64, 18}}</string>
 							<reference key="NSSuperview" ref="182693741"/>
 							<reference key="NSNextKeyView" ref="931418527"/>
 							<bool key="NSEnabled">YES</bool>
@@ -437,172 +436,6 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-						</object>
-						<object class="NSBox" id="1012678591">
-							<reference key="NSNextResponder" ref="182693741"/>
-							<int key="NSvFlags">256</int>
-							<array class="NSMutableArray" key="NSSubviews">
-								<object class="NSView" id="772377613">
-									<reference key="NSNextResponder" ref="1012678591"/>
-									<int key="NSvFlags">274</int>
-									<array class="NSMutableArray" key="NSSubviews">
-										<object class="NSTextField" id="864598614">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{13, 193}, {153, 14}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<reference key="NSNextKeyView" ref="24399355"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="470400361">
-												<int key="NSCellFlags">67108864</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">Xbox 360 Controller Driver</string>
-												<object class="NSFont" key="NSSupport" id="26">
-													<bool key="IBIsSystemFont">YES</bool>
-													<double key="NSSize">11</double>
-													<int key="NSfFlags">3100</int>
-												</object>
-												<reference key="NSControlView" ref="864598614"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-										<object class="NSTextField" id="24399355">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{13, 173}, {129, 17}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<reference key="NSNextKeyView" ref="850481656"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="26653717">
-												<int key="NSCellFlags">67108864</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">Version 0.13</string>
-												<object class="NSFont" key="NSSupport" id="276746597">
-													<bool key="IBIsSystemFont">YES</bool>
-													<double key="NSSize">10</double>
-													<int key="NSfFlags">2843</int>
-												</object>
-												<reference key="NSControlView" ref="24399355"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-										<object class="NSTextField" id="850481656">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{15, 128}, {129, 17}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<reference key="NSNextKeyView" ref="786708842"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="1039916014">
-												<int key="NSCellFlags">67108864</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">(C) 2006-13 Colin Munro</string>
-												<reference key="NSSupport" ref="276746597"/>
-												<reference key="NSControlView" ref="850481656"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-										<object class="NSTextField" id="786708842">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{15, 96}, {129, 28}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<reference key="NSNextKeyView" ref="924246914"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="202714468">
-												<int key="NSCellFlags">69206017</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">(C)2014 Steve Luzynski</string>
-												<reference key="NSSupport" ref="26"/>
-												<reference key="NSControlView" ref="786708842"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-										<object class="NSTextField" id="924246914">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{13, 81}, {153, 14}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<reference key="NSNextKeyView" ref="564381582"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="59849550">
-												<int key="NSCellFlags">69206017</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">http://www.luzynski.com</string>
-												<reference key="NSSupport" ref="26"/>
-												<reference key="NSControlView" ref="924246914"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-										<object class="NSTextField" id="564381582">
-											<reference key="NSNextResponder" ref="772377613"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{14, 13}, {150, 52}}</string>
-											<reference key="NSSuperview" ref="772377613"/>
-											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="837329624">
-												<int key="NSCellFlags">67108864</int>
-												<int key="NSCellFlags2">272629760</int>
-												<string key="NSContents">For more information on this driver, please see the supplied Readme and Licence documents.</string>
-												<reference key="NSSupport" ref="276746597"/>
-												<reference key="NSControlView" ref="564381582"/>
-												<reference key="NSBackgroundColor" ref="972077515"/>
-												<reference key="NSTextColor" ref="787701499"/>
-											</object>
-											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
-											<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
-										</object>
-									</array>
-									<string key="NSFrame">{{2, 2}, {179, 218}}</string>
-									<reference key="NSSuperview" ref="1012678591"/>
-									<reference key="NSNextKeyView" ref="864598614"/>
-								</object>
-							</array>
-							<string key="NSFrame">{{395, 16}, {183, 235}}</string>
-							<reference key="NSSuperview" ref="182693741"/>
-							<reference key="NSNextKeyView" ref="772377613"/>
-							<string key="NSOffsets">{0, 0}</string>
-							<object class="NSTextFieldCell" key="NSTitleCell">
-								<int key="NSCellFlags">67108864</int>
-								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">About</string>
-								<reference key="NSSupport" ref="26"/>
-								<object class="NSColor" key="NSBackgroundColor">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">textBackgroundColor</string>
-									<object class="NSColor" key="NSColor" id="240678025">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MQA</bytes>
-									</object>
-								</object>
-								<object class="NSColor" key="NSTextColor">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">labelColor</string>
-									<reference key="NSColor" ref="823782827"/>
-								</object>
-							</object>
-							<reference key="NSContentView" ref="772377613"/>
-							<int key="NSBorderType">3</int>
-							<int key="NSBoxType">0</int>
-							<int key="NSTitlePosition">2</int>
-							<bool key="NSTransparent">NO</bool>
 						</object>
 						<object class="NSImageView" id="474618466">
 							<reference key="NSNextResponder" ref="182693741"/>
@@ -759,7 +592,11 @@
 														<int key="NSCellFlags">75497536</int>
 														<int key="NSCellFlags2">2048</int>
 														<string key="NSContents"/>
-														<reference key="NSSupport" ref="26"/>
+														<object class="NSFont" key="NSSupport" id="26">
+															<bool key="IBIsSystemFont">YES</bool>
+															<double key="NSSize">11</double>
+															<int key="NSfFlags">3100</int>
+														</object>
 														<object class="NSColor" key="NSBackgroundColor" id="1061957366">
 															<int key="NSColorSpace">3</int>
 															<bytes key="NSWhite">MC4zMzMzMzI5ODU2AA</bytes>
@@ -828,7 +665,10 @@
 											</array>
 											<double key="NSIntercellSpacingWidth">3</double>
 											<double key="NSIntercellSpacingHeight">2</double>
-											<reference key="NSBackgroundColor" ref="240678025"/>
+											<object class="NSColor" key="NSBackgroundColor">
+												<int key="NSColorSpace">3</int>
+												<bytes key="NSWhite">MQA</bytes>
+											</object>
 											<object class="NSColor" key="NSGridColor">
 												<int key="NSColorSpace">6</int>
 												<string key="NSCatalogName">System</string>
@@ -1315,26 +1155,25 @@
 							<reference ref="306776851"/>
 							<reference ref="904887625"/>
 							<reference ref="697093889"/>
-							<reference ref="831751290"/>
-							<reference ref="259262025"/>
-							<reference ref="480509555"/>
-							<reference ref="507865753"/>
 							<reference ref="676721950"/>
-							<reference ref="63088613"/>
 							<reference ref="594420181"/>
-							<reference ref="1050460036"/>
 							<reference ref="417421942"/>
 							<reference ref="939084424"/>
-							<reference ref="528430124"/>
-							<reference ref="489803090"/>
-							<reference ref="1022723239"/>
 							<reference ref="476460571"/>
-							<reference ref="546276811"/>
-							<reference ref="1012678591"/>
 							<reference ref="474618466"/>
 							<reference ref="82694390"/>
 							<reference ref="496590417"/>
 							<reference ref="931418527"/>
+							<reference ref="1050460036"/>
+							<reference ref="63088613"/>
+							<reference ref="480509555"/>
+							<reference ref="528430124"/>
+							<reference ref="489803090"/>
+							<reference ref="546276811"/>
+							<reference ref="1022723239"/>
+							<reference ref="507865753"/>
+							<reference ref="259262025"/>
+							<reference ref="831751290"/>
 						</array>
 						<reference key="parent" ref="871157433"/>
 						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
@@ -1385,26 +1224,25 @@
 									<reference key="NS.object.0" ref="306776851"/>
 									<reference key="NS.object.1" ref="904887625"/>
 									<reference key="NS.object.2" ref="697093889"/>
-									<reference key="NS.object.3" ref="831751290"/>
-									<reference key="NS.object.4" ref="259262025"/>
-									<reference key="NS.object.5" ref="480509555"/>
-									<reference key="NS.object.6" ref="507865753"/>
-									<reference key="NS.object.7" ref="676721950"/>
-									<reference key="NS.object.8" ref="63088613"/>
-									<reference key="NS.object.9" ref="594420181"/>
-									<reference key="NS.object.10" ref="1050460036"/>
-									<reference key="NS.object.11" ref="417421942"/>
-									<reference key="NS.object.12" ref="939084424"/>
-									<reference key="NS.object.13" ref="528430124"/>
-									<reference key="NS.object.14" ref="489803090"/>
-									<reference key="NS.object.15" ref="1022723239"/>
-									<reference key="NS.object.16" ref="476460571"/>
-									<reference key="NS.object.17" ref="546276811"/>
-									<reference key="NS.object.18" ref="1012678591"/>
-									<reference key="NS.object.19" ref="474618466"/>
-									<reference key="NS.object.20" ref="82694390"/>
-									<reference key="NS.object.21" ref="496590417"/>
-									<reference key="NS.object.22" ref="931418527"/>
+									<reference key="NS.object.3" ref="259262025"/>
+									<reference key="NS.object.4" ref="480509555"/>
+									<reference key="NS.object.5" ref="507865753"/>
+									<reference key="NS.object.6" ref="676721950"/>
+									<reference key="NS.object.7" ref="63088613"/>
+									<reference key="NS.object.8" ref="594420181"/>
+									<reference key="NS.object.9" ref="1050460036"/>
+									<reference key="NS.object.10" ref="417421942"/>
+									<reference key="NS.object.11" ref="939084424"/>
+									<reference key="NS.object.12" ref="528430124"/>
+									<reference key="NS.object.13" ref="489803090"/>
+									<reference key="NS.object.14" ref="1022723239"/>
+									<reference key="NS.object.15" ref="476460571"/>
+									<reference key="NS.object.16" ref="546276811"/>
+									<reference key="NS.object.17" ref="474618466"/>
+									<reference key="NS.object.18" ref="82694390"/>
+									<reference key="NS.object.19" ref="496590417"/>
+									<reference key="NS.object.20" ref="931418527"/>
+									<reference key="NS.object.21" ref="831751290"/>
 								</object>
 							</object>
 						</object>
@@ -1568,7 +1406,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{123, 43}</string>
+											<string key="NS.pointval">{128, 43}</string>
 										</object>
 									</object>
 								</object>
@@ -1615,7 +1453,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{226, 43}</string>
+											<string key="NS.pointval">{413, 44}</string>
 										</object>
 									</object>
 								</object>
@@ -1662,7 +1500,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{306, 117}</string>
+											<string key="NS.pointval">{498, 117}</string>
 										</object>
 									</object>
 								</object>
@@ -1709,7 +1547,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{151, 141}</string>
+											<string key="NS.pointval">{234, 142}</string>
 										</object>
 									</object>
 								</object>
@@ -1803,7 +1641,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{306, 202}</string>
+											<string key="NS.pointval">{498, 202}</string>
 										</object>
 									</object>
 								</object>
@@ -1897,7 +1735,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{224, 224}</string>
+											<string key="NS.pointval">{414, 224}</string>
 										</object>
 									</object>
 								</object>
@@ -2047,7 +1885,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{309, 81}</string>
+											<string key="NS.pointval">{506, 79}</string>
 										</object>
 									</object>
 								</object>
@@ -2097,7 +1935,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{309, 61}</string>
+											<string key="NS.pointval">{506, 59}</string>
 										</object>
 									</object>
 								</object>
@@ -2147,7 +1985,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{224, 16}</string>
+											<string key="NS.pointval">{416, 16}</string>
 										</object>
 									</object>
 								</object>
@@ -2247,7 +2085,7 @@
 									<object class="IBMemberPropertyValue" key="NS.object.0">
 										<object class="NSValue" key="IBPropertyValue">
 											<int key="NS.special">1</int>
-											<string key="NS.pointval">{309, 41}</string>
+											<string key="NS.pointval">{506, 41}</string>
 										</object>
 									</object>
 								</object>
@@ -2280,71 +2118,6 @@
 								</object>
 							</dictionary>
 							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">158</int>
-						<reference key="object" ref="1012678591"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="864598614"/>
-							<reference ref="24399355"/>
-							<reference ref="564381582"/>
-							<reference ref="924246914"/>
-							<reference ref="786708842"/>
-							<reference ref="850481656"/>
-						</array>
-						<reference key="parent" ref="182693741"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="1012678591"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{395, 16}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{183, 235}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<object class="NSMutableDictionary" key="IBToManyRelationshipCandidates">
-								<string key="NS.key.0">ibDesignableContentView.ibShadowedSubviews</string>
-								<object class="NSOrderedSet" key="NS.object.0">
-									<reference key="NS.object.0" ref="864598614"/>
-									<reference key="NS.object.1" ref="24399355"/>
-									<reference key="NS.object.2" ref="786708842"/>
-									<reference key="NS.object.3" ref="924246914"/>
-									<reference key="NS.object.4" ref="564381582"/>
-									<reference key="NS.object.5" ref="850481656"/>
-								</object>
-							</object>
 						</object>
 					</object>
 					<object class="IBObjectRecord">
@@ -2552,366 +2325,6 @@
 						<string key="objectName">Application</string>
 						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
 							<reference key="IBDocumentObject" ref="475535432"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">161</int>
-						<reference key="object" ref="864598614"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="470400361"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="864598614"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{13, 193}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{153, 14}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">187</int>
-						<reference key="object" ref="470400361"/>
-						<reference key="parent" ref="864598614"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="470400361"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">163</int>
-						<reference key="object" ref="24399355"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="26653717"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="24399355"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{13, 173}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{129, 17}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">188</int>
-						<reference key="object" ref="26653717"/>
-						<reference key="parent" ref="24399355"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="26653717"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">165</int>
-						<reference key="object" ref="850481656"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="1039916014"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="850481656"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{15, 128}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{129, 17}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">189</int>
-						<reference key="object" ref="1039916014"/>
-						<reference key="parent" ref="850481656"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="1039916014"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">166</int>
-						<reference key="object" ref="786708842"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="202714468"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="786708842"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{15, 96}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{129, 28}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">190</int>
-						<reference key="object" ref="202714468"/>
-						<reference key="parent" ref="786708842"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="202714468"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">167</int>
-						<reference key="object" ref="924246914"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="59849550"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="924246914"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{13, 81}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{153, 14}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">191</int>
-						<reference key="object" ref="59849550"/>
-						<reference key="parent" ref="924246914"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="59849550"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">168</int>
-						<reference key="object" ref="564381582"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="837329624"/>
-						</array>
-						<reference key="parent" ref="1012678591"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="564381582"/>
-							<dictionary class="NSMutableDictionary" key="IBPropertyValues">
-								<object class="NSMutableDictionary" key="frameOrigin">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">1</int>
-											<string key="NS.pointval">{14, 13}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="frameSize">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<object class="NSValue" key="IBPropertyValue">
-											<int key="NS.special">2</int>
-											<string key="NS.sizeval">{150, 52}</string>
-										</object>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHadAnyAmbiguityOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalHasUninitializedAutolayoutAmbiguityStatus">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary" key="ibExternalWasMisplacedOnLastSave">
-									<reference key="NS.key.0" ref="327761880"/>
-									<object class="IBMemberPropertyValue" key="NS.object.0">
-										<boolean value="NO" key="IBPropertyValue"/>
-									</object>
-								</object>
-							</dictionary>
-							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
-						</object>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">192</int>
-						<reference key="object" ref="837329624"/>
-						<reference key="parent" ref="564381582"/>
-						<object class="IBMemberPropertyStorage" key="memberPropertyStorage">
-							<reference key="IBDocumentObject" ref="837329624"/>
 							<dictionary class="NSMutableDictionary" key="IBPropertyValues"/>
 							<dictionary class="NSMutableDictionary" key="IBToManyRelationshipCandidates"/>
 						</object>
@@ -3632,14 +3045,6 @@
 				<string key="120.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="156.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="157.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<reference key="158.IBNSViewMetadataGestureRecognizers" ref="0"/>
-				<string key="158.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="161.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="163.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="165.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="166.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="167.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="168.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="174.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="177.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="178.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3650,12 +3055,6 @@
 				<string key="184.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="185.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="186.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="187.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="188.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="189.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="190.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="191.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="192.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="193.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="194.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="195.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3682,6 +3081,7 @@
 				<string key="221.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="227.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="228.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="6.IBNSViewMetadataGestureRecognizers" ref="0"/>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="98.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="99.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3690,7 +3090,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">230</int>
+			<int key="maxID">232</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

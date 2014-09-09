@@ -186,106 +186,106 @@ static BOOL IsXBox360Controller(io_service_t device)
     return self;
 }
 
-- (NSString*)toolPath
-{
-    // Find the path of our tool in our bundle - should it be in the driver's bundle?
-    return [[[owner bundle] resourcePath] stringByAppendingPathComponent:TOOL_FILENAME];
-}
+//- (NSString*)toolPath
+//{
+//    // Find the path of our tool in our bundle - should it be in the driver's bundle?
+//    return [[[owner bundle] resourcePath] stringByAppendingPathComponent:TOOL_FILENAME];
+//}
+//
+//- (OSStatus)writeToolWithAuthorisation:(AuthorizationRef)authorisationRef
+//{
+//    OSStatus result;
+//    NSString *toolPath;
+//    NSMutableArray *parameters;
+//    const char **argv;
+//    int i;
+//    
+//    toolPath = [self toolPath];
+//    
+//    // Build array of parameters
+//    parameters = [NSMutableArray arrayWithCapacity:10];
+//    [parameters addObject:@"edit"];
+//    
+//    for (NSNumber *key in enabled)
+//    {
+//        NSString *name = [entries objectForKey:key];
+//        NSUInteger keyValue = [key unsignedIntValue];
+//        UInt16 vendor = (keyValue >> 16) & 0xFFFF;
+//        UInt16 product = keyValue & 0xFFFF;
+//        [parameters addObject:name];
+//        [parameters addObject:[NSString stringWithFormat:@"%i", vendor]];
+//        [parameters addObject:[NSString stringWithFormat:@"%i", product]];
+//    }
+//    
+//    // Convert parameters to a C array
+//    argv = malloc(sizeof(char*) * ([parameters count] + 1));
+//    i = 0;
+//    for (NSString *item in parameters)
+//        argv[i++] = [item UTF8String];
+//    argv[i] = NULL;
+//    
+//    // Execute the command
+//    result = AuthorizationExecuteWithPrivileges(authorisationRef,
+//                                                [toolPath UTF8String],
+//                                                kAuthorizationFlagDefaults,
+//                                                (char**)argv,
+//                                                NULL);
+//    
+//    // Done
+//    free(argv);
+//    return result;
+//}
 
-- (OSStatus)writeToolWithAuthorisation:(AuthorizationRef)authorisationRef
-{
-    OSStatus result;
-    NSString *toolPath;
-    NSMutableArray *parameters;
-    const char **argv;
-    int i;
-    
-    toolPath = [self toolPath];
-    
-    // Build array of parameters
-    parameters = [NSMutableArray arrayWithCapacity:10];
-    [parameters addObject:@"edit"];
-    
-    for (NSNumber *key in enabled)
-    {
-        NSString *name = [entries objectForKey:key];
-        NSUInteger keyValue = [key unsignedIntValue];
-        UInt16 vendor = (keyValue >> 16) & 0xFFFF;
-        UInt16 product = keyValue & 0xFFFF;
-        [parameters addObject:name];
-        [parameters addObject:[NSString stringWithFormat:@"%i", vendor]];
-        [parameters addObject:[NSString stringWithFormat:@"%i", product]];
-    }
-    
-    // Convert parameters to a C array
-    argv = malloc(sizeof(char*) * ([parameters count] + 1));
-    i = 0;
-    for (NSString *item in parameters)
-        argv[i++] = [item UTF8String];
-    argv[i] = NULL;
-    
-    // Execute the command
-    result = AuthorizationExecuteWithPrivileges(authorisationRef,
-                                                [toolPath UTF8String],
-                                                kAuthorizationFlagDefaults,
-                                                (char**)argv,
-                                                NULL);
-    
-    // Done
-    free(argv);
-    return result;
-}
-
-- (NSString*)readTool
-{
-    NSTask *task;
-    NSPipe *pipe, *error;
-    NSData *data;
-    NSString *response;
-    NSArray *lines;
-    
-    // Prepare to run the tool
-    task = [[NSTask alloc] init];
-    [task setLaunchPath:[self toolPath]];
-    
-    // Hook up the pipe to catch the output
-    pipe = [NSPipe pipe];
-    [task setStandardOutput:pipe];
-    error = [NSPipe pipe];
-    [task setStandardError:error];
-    
-    // Run the tool
-    [task launch];
-    [task waitUntilExit];
-    
-    // Check result
-    if ([task terminationStatus] != 0)
-    {
-        data = [[error fileHandleForReading] readDataToEndOfFile];
-        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    }
-    
-    // Read the data back
-    data = [[pipe fileHandleForReading] readDataToEndOfFile];
-    response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    // Parse the results
-    lines = [response componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    for (NSString *line in lines)
-    {
-        NSArray *values = [line componentsSeparatedByString:@","];
-        if ([values count] != 3)
-            continue;
-        NSUInteger vendor = [[values objectAtIndex:1] intValue];
-        NSUInteger product = [[values objectAtIndex:2] intValue];
-        NSNumber *key = [NSNumber numberWithUnsignedInt:(int)((vendor << 16) | product)];
-        [enabled addObject:key];
-        if ([entries objectForKey:key] == nil)
-            [entries setObject:SanitiseName([values objectAtIndex:0]) forKey:key];
-    }
-    
-    return nil;
-}
+//- (NSString*)readTool
+//{
+//    NSTask *task;
+//    NSPipe *pipe, *error;
+//    NSData *data;
+//    NSString *response;
+//    NSArray *lines;
+//    
+//    // Prepare to run the tool
+//    task = [[NSTask alloc] init];
+//    [task setLaunchPath:[self toolPath]];
+//    
+//    // Hook up the pipe to catch the output
+//    pipe = [NSPipe pipe];
+//    [task setStandardOutput:pipe];
+//    error = [NSPipe pipe];
+//    [task setStandardError:error];
+//    
+//    // Run the tool
+//    [task launch];
+//    [task waitUntilExit];
+//    
+//    // Check result
+//    if ([task terminationStatus] != 0)
+//    {
+//        data = [[error fileHandleForReading] readDataToEndOfFile];
+//        return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    }
+//    
+//    // Read the data back
+//    data = [[pipe fileHandleForReading] readDataToEndOfFile];
+//    response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    
+//    // Parse the results
+//    lines = [response componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+//    for (NSString *line in lines)
+//    {
+//        NSArray *values = [line componentsSeparatedByString:@","];
+//        if ([values count] != 3)
+//            continue;
+//        NSUInteger vendor = [[values objectAtIndex:1] intValue];
+//        NSUInteger product = [[values objectAtIndex:2] intValue];
+//        NSNumber *key = [NSNumber numberWithUnsignedInt:(int)((vendor << 16) | product)];
+//        [enabled addObject:key];
+//        if ([entries objectForKey:key] == nil)
+//            [entries setObject:SanitiseName([values objectAtIndex:0]) forKey:key];
+//    }
+//    
+//    return nil;
+//}
 
 // Get the list of devices we've seen from the settings
 - (NSString*)readKnownDevices
@@ -370,8 +370,8 @@ static BOOL IsXBox360Controller(io_service_t device)
     // These can be done in any order, depending on the behaviour desired
     if (error == nil)
         error = [self readKnownDevices];
-    if (error == nil)
-        error = [self readTool];
+//    if (error == nil)
+//        error = [self readTool];
     if (error == nil)
         error = [self readIOKit];
     
@@ -389,49 +389,49 @@ static BOOL IsXBox360Controller(io_service_t device)
     return YES;
 }
 
-// attempt to authenticate so we can edit the driver's list of supported devices as root
-- (BOOL)trySave
-{
-    OSStatus status;
-    AuthorizationRef authorisationRef;
-    BOOL success = NO;
-    
-    status = AuthorizationCreate(NULL,
-                                 kAuthorizationEmptyEnvironment,
-                                 kAuthorizationFlagDefaults,
-                                 &authorisationRef);
-    if (status != errAuthorizationSuccess)
-    {
-        [self showFailure:NSLocalizedString(@"Unable to create authorisation request", @"")];
-        return NO;
-    }
-    
-    AuthorizationItem right = {kAuthorizationRightExecute, 0, NULL, 0};
-    AuthorizationRights rights = {1, &right};
-    status = AuthorizationCopyRights(authorisationRef,
-                                     &rights,
-                                     NULL,
-                                     kAuthorizationFlagDefaults | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagPreAuthorize | kAuthorizationFlagExtendRights,
-                                     NULL);
-    if (status != errAuthorizationSuccess)
-    {
-        [self showFailure:NSLocalizedString(@"Unable to acquire authorisation", @"")];
-        goto fail;
-    }
-    
-    status = [self writeToolWithAuthorisation:authorisationRef];
-    if (status != errAuthorizationSuccess)
-    {
-        [self showFailure:NSLocalizedString(@"Failed to execute the driver tool", @"")];
-        goto fail;
-    }
-    
-    success = YES;
-    
-fail:
-    AuthorizationFree(authorisationRef, kAuthorizationFlagDestroyRights);
-    return success;
-}
+//// attempt to authenticate so we can edit the driver's list of supported devices as root
+//- (BOOL)trySave
+//{
+//    OSStatus status;
+//    AuthorizationRef authorisationRef;
+//    BOOL success = NO;
+//    
+//    status = AuthorizationCreate(NULL,
+//                                 kAuthorizationEmptyEnvironment,
+//                                 kAuthorizationFlagDefaults,
+//                                 &authorisationRef);
+//    if (status != errAuthorizationSuccess)
+//    {
+//        [self showFailure:NSLocalizedString(@"Unable to create authorisation request", @"")];
+//        return NO;
+//    }
+//    
+//    AuthorizationItem right = {kAuthorizationRightExecute, 0, NULL, 0};
+//    AuthorizationRights rights = {1, &right};
+//    status = AuthorizationCopyRights(authorisationRef,
+//                                     &rights,
+//                                     NULL,
+//                                     kAuthorizationFlagDefaults | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagPreAuthorize | kAuthorizationFlagExtendRights,
+//                                     NULL);
+//    if (status != errAuthorizationSuccess)
+//    {
+//        [self showFailure:NSLocalizedString(@"Unable to acquire authorisation", @"")];
+//        goto fail;
+//    }
+//    
+//    status = [self writeToolWithAuthorisation:authorisationRef];
+//    if (status != errAuthorizationSuccess)
+//    {
+//        [self showFailure:NSLocalizedString(@"Failed to execute the driver tool", @"")];
+//        goto fail;
+//    }
+//    
+//    success = YES;
+//    
+//fail:
+//    AuthorizationFree(authorisationRef, kAuthorizationFlagDestroyRights);
+//    return success;
+//}
 
 - (void)showWithOwner:(Pref360ControlPref*)pane
 {
@@ -447,8 +447,8 @@ fail:
 
 - (IBAction)done:(id)sender
 {
-    if (changed)
-        [self trySave];
+//    if (changed)
+//        [self trySave];
     [NSApp endSheet:sheet];
     [sheet close];
 }
