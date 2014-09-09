@@ -1,12 +1,15 @@
 #!/bin/bash
-# Right now this depends on manually building from the gui and archiving 
-# into the build directory. Clearly this is sub-optimal and will be fixed ASAP.
+rm 360ControllerInstaller.pkg
+rm -rf build
 
-cd build
-sudo chown -R root:wheel *
-pkgbuild --root 360Controller 360Controller.pkg
-pkgbuild --root Pref360Control Pref360Control.pkg
-pkgbuild --root Wireless360Controller Wireless360Controller.pkg
-pkgbuild --root WirelessGamingReceiver WirelessGamingReceiver.pkg
-productbuild --distribution ./Distribution.xml --package-path . ./360ControllerInstaller.pkg
-productsign --sign "Developer ID Installer" 360ControllerInstaller.pkg Installer.pkg
+xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme 360Controller -archivePath ./build/360Controller archive
+xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme Pref360Control -archivePath ./build/Pref360Control archive
+xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme Wireless360Controller -archivePath ./build/Wireless360Controller archive
+xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme WirelessGamingReceiver -archivePath ./build/WirelessGamingReceiver archive
+
+pkgbuild --root build/360Controller.xcarchive/Products build/360Controller.pkg
+pkgbuild --root build/Pref360Control.xcarchive/Products build/Pref360Control.pkg
+pkgbuild --root build/Wireless360Controller.xcarchive/Products build/Wireless360Controller.pkg
+pkgbuild --root build/WirelessGamingReceiver.xcarchive/Products build/WirelessGamingReceiver.pkg
+
+productbuild --distribution ./Distribution.xml --sign "Developer ID Installer" --package-path build ./360ControllerInstaller.pkg
