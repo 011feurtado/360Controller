@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <installer-gui-script minSpecVersion="1">
+	<title>XBox 360 Controllers</title>
     <pkg-ref id="com.luzynski.driver.Xbox360Controller"/>
     <pkg-ref id="com.luzynski.driver.360Controller.Prefs"/>
     <pkg-ref id="com.luzynski.driver.Wireless360Controller"/>
     <pkg-ref id="com.luzynski.driver.WirelessGamingReceiver"/>
-    <options customize="never" require-scripts="false"/>
+    <options customize="never" require-scripts="false" rootVolumeOnly="true"/>
+	<welcome file="README.md"/>
+	<license file="license.txt"/>
+	<allowed-os-versions>
+		<os-version min="10.10"/>
+	</allowed-os-versions>
+	<product id="360Controller" version="%VERSION%" />
     <choices-outline>
         <line choice="default">
             <line choice="com.luzynski.driver.Xbox360Controller"/>
