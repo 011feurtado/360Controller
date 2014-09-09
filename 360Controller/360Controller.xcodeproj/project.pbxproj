@@ -79,7 +79,6 @@
 		247142CAFF3F8F9811CA285C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E0C1CB2419BF246600689EB4 /* Feedback */,
 				3B2EF19A0965A03E007BFB7B /* Kernel Driver */,
 			);
 			name = Source;
@@ -127,13 +126,6 @@
 				3B36DCC810B7817E00FFD769 /* chatpadhid.h */,
 			);
 			name = ChatPad;
-			sourceTree = "<group>";
-		};
-		E0C1CB2419BF246600689EB4 /* Feedback */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Feedback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
