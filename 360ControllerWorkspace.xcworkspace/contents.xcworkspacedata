@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:360Controller"
+      name = "360Controller">
+      <FileRef
+         location = "group:360Controller.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:360Daemon"
+      name = "360Daemon">
+      <FileRef
+         location = "group:360Daemon.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Feedback360"
+      name = "Feedback360">
+      <FileRef
+         location = "group:Feedback360.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Pref360Control"
+      name = "Pref360Control">
+      <FileRef
+         location = "group:Pref360Control.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Wireless360Controller"
+      name = "Wireless360Controller">
+      <FileRef
+         location = "group:Wireless360Controller.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:WirelessGamingReceiver"
+      name = "WirelessGamingReceiver">
+      <FileRef
+         location = "group:WirelessGamingReceiver.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
