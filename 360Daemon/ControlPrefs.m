@@ -52,16 +52,16 @@ BOOL AlertDisabled(int index)
 
 void SetController(NSString *serial, NSDictionary *data)
 {
-    CFPreferencesSetValue((CFStringRef)serial, (__bridge CFPropertyListRef)(data), DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
-    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPreferencesSetValue((CFStringRef)serial, (__bridge CFPropertyListRef)(data), DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
+    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
 }
 
 NSDictionary* GetController(NSString *serial)
 {
     CFPropertyListRef value;
     
-    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
-    value = CFPreferencesCopyValue((CFStringRef)serial, DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
+    value = CFPreferencesCopyValue((CFStringRef)serial, DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
     return ((__bridge NSDictionary*)value);
 }
 
@@ -82,21 +82,13 @@ void ConfigController(io_service_t device, NSDictionary *config)
 
 void SetKnownDevices(NSDictionary *devices)
 {
-    // Setting the dictionary should work?
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:devices];
-    CFPreferencesSetValue((CFStringRef)D_KNOWNDEV, (__bridge CFPropertyListRef)(data), DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
-    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
+    CFPreferencesSetValue((CFStringRef)D_KNOWNDEV, (__bridge CFPropertyListRef)(data), DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
+    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
 }
 
 NSDictionary* GetKnownDevices(void)
 {
-    CFPropertyListRef value;
-    NSData *data;
-    
-    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
-    value = CFPreferencesCopyValue((CFStringRef)D_KNOWNDEV, DOM_CONTROLLERS, kCFPreferencesAnyUser, kCFPreferencesCurrentHost);
-    data = (__bridge NSData*)value;
-    if (data == nil)
-        return nil;
-    return [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    CFPreferencesSynchronize(DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost);
+    return [NSKeyedUnarchiver unarchiveObjectWithData: CFBridgingRelease(CFPreferencesCopyValue((CFStringRef)D_KNOWNDEV, DOM_CONTROLLERS, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost))];
 }

@@ -59,10 +59,10 @@
 - (id)initWithFrame:(NSRect)frameRect
 {
 	if ((self = [super initWithFrame:frameRect]) != nil) {
-        NSRect rect,triangle;
+        NSRect rect = [self bounds];
+        NSRect triangle = NSMakeRect(0,0,0,0);
         
         bUp=bDown=bLeft=bRight=FALSE;
-        rect=[self bounds];
         triangle.origin.x+=INSET_AMOUNT;
         triangle.origin.y+=INSET_AMOUNT;
         triangle.size.width-=INSET_AMOUNT*2;
