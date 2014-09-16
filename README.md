@@ -8,6 +8,9 @@ More info at: http://www.luzynski.com
 Download link: http://www.luzynski.com/downloads/360ControllerInstaller.pkg
 
 ## Current release: 1.0.0d13 - beta 1 for Yosemite 10.10.
+This probably only works on Yosemite. The LEDs don't work. There are
+no instructions in the installer. If you're not a developer you shouldn't
+try it, but then again you would not, in theory, have Yosemite either.
 
 ## About
 This driver supports the Microsoft Xbox 360 controller, including access to rumble motors and LEDs,
