@@ -2,6 +2,9 @@
 rm 360ControllerInstaller.pkg
 rm -rf build
 
+cp welcome.rtf resources
+cp license.txt resources
+
 xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme 360Controller -archivePath ./build/360Controller archive
 xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme Pref360Control -archivePath ./build/Pref360Control archive
 xcodebuild -workspace 360ControllerWorkspace.xcworkspace -scheme Wireless360Controller -archivePath ./build/Wireless360Controller archive

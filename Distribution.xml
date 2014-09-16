@@ -6,8 +6,8 @@
     <pkg-ref id="com.luzynski.driver.Wireless360Controller"/>
     <pkg-ref id="com.luzynski.driver.WirelessGamingReceiver"/>
     <options customize="never" require-scripts="false" rootVolumeOnly="true"/>
-	<welcome file="welcome.rtf" />
-	<license file="license.txt" />
+	<welcome file="welcome.rtf" mime-type="application/rtf" />
+	<license file="license.txt" mime-type="text/plain"/>
 	<allowed-os-versions>
 		<os-version min="10.10" />
 	</allowed-os-versions>
