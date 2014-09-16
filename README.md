@@ -5,6 +5,9 @@ Copyright (C) 2014 Steve Luzynski
 Project page: http://sluzynsk.github.io/360Controller
 Project repo: https://github.com.io/sluzynsk/360Controller
 More info at: http://www.luzynski.com
+Download link: http://www.luzynski.com/downloads/360ControllerInstaller.pkg
+
+## Current release: 1.0.0d13 - beta 1 for Yosemite 10.10.
 
 ## About
 This driver supports the Microsoft Xbox 360 controller, including access to rumble motors and LEDs,
