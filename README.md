@@ -7,10 +7,14 @@ Project repo: https://github.com.io/sluzynsk/360Controller
 More info at: http://www.luzynski.com
 Download link: http://www.luzynski.com/downloads/360ControllerInstaller.pkg
 
-## Current release: 1.0.0d13 - beta 1 for Yosemite 10.10.
-This probably only works on Yosemite. The LEDs don't work. There are
-no instructions in the installer. If you're not a developer you shouldn't
-try it, but then again you would not, in theory, have Yosemite either.
+## Current release: 1.0.0d13 - beta 2 for Yosemite 10.10.
+This probably only works on Yosemite. I don't have an older machine to try it on. Sorry.
+
+As of Beta 2: 
+The LEDs work. They will flash when you connect a controller and then #1 will light up and stay on.
+Note that if you want them to work like they do on the console (controller #2 lights #2, etc.) then I need some 
+feedback or I'm not spending the time.
+I've also fixed the 3rd party support so your non-Microsoft controllers should work now.
 
 ## About
 This driver supports the Microsoft Xbox 360 controller, including access to rumble motors and LEDs,
