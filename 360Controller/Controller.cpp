@@ -99,7 +99,7 @@ IOReturn Xbox360ControllerClass::setReport(IOMemoryDescriptor *report,IOHIDRepor
 			rumble.big=data[0];
 			rumble.little=data[1];
 			GetOwner(this)->QueueWrite(&rumble,sizeof(rumble));
-//			IOLog("Set rumble: big(%d) little(%d)\n", rumble.big, rumble.little);
+			IOLog("Set rumble: big(%d) little(%d)\n", rumble.big, rumble.little);
 		}
             return kIOReturnSuccess;
         case 0x01:  // Set LEDs
@@ -111,7 +111,7 @@ IOReturn Xbox360ControllerClass::setReport(IOMemoryDescriptor *report,IOHIDRepor
 			Xbox360_Prepare(led,outLed);
 			led.pattern=data[0];
 			GetOwner(this)->QueueWrite(&led,sizeof(led));
-//			IOLog("Set LED: %d\n", led.pattern);
+			IOLog("Set LED: %d\n", led.pattern);
 		}
             return kIOReturnSuccess;
         default:

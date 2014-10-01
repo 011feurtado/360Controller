@@ -434,7 +434,7 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     }
     // Read existing properties
     {
-//        CFDictionaryRef dict=(CFDictionaryRef)IORegistryEntryCreateCFProperty(registryEntry,CFSTR("DeviceData"),NULL,0);
+        // CFDictionaryRef dict=(CFDictionaryRef)IORegistryEntryCreateCFProperty(registryEntry,CFSTR("DeviceData"),NULL,0);
         CFDictionaryRef dict = (__bridge CFDictionaryRef)GetController(GetSerialNumber(registryEntry));
         if(dict!=0) {
             CFBooleanRef boolValue;

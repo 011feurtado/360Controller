@@ -179,7 +179,7 @@ static void callbackConnected(void *param,io_iterator_t iterator)
                             c = 0x06 + i;
                             if (leds[i] == nil)
                                 leds[i] = [serialNumber retain];
-//                            NSLog(@"Added controller with LED %i", i);
+                            NSLog(@"Added controller with LED %i", i);
                             break;
                         }
                     }
@@ -255,7 +255,7 @@ static void callbackDisconnected(void *param, io_iterator_t iterator)
                 {
                     [leds[i] release];
                     leds[i] = nil;
-//                    NSLog(@"Removed controller with LED %i", i);
+                    NSLog(@"Removed controller with LED %i", i);
                 }
             }
         }

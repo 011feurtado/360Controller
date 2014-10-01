@@ -245,12 +245,12 @@ void Xbox360Peripheral::readSettings(void)
     if(value!=NULL) relativeLeft=value->getValue();
     value=OSDynamicCast(OSBoolean,dataDictionary->getObject("RelativeRight"));
     if(value!=NULL) relativeRight=value->getValue();
-    /*
+    
     IOLog("Xbox360Peripheral preferences loaded:\n  invertLeft X: %s, Y: %s\n   invertRight X: %s, Y:%s\n  deadzone Left: %d, Right: %d\n\n",
             invertLeftX?"True":"False",invertLeftY?"True":"False",
             invertRightX?"True":"False",invertRightY?"True":"False",
             deadzoneLeft,deadzoneRight);
-    */
+    
 }
 
 // Initialise the extension
