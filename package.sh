@@ -20,3 +20,6 @@ pkgbuild --root build/Wireless360Controller.xcarchive/Products build/Wireless360
 pkgbuild --root build/WirelessGamingReceiver.xcarchive/Products build/WirelessGamingReceiver.pkg
 
 productbuild --distribution ./Distribution.xml --sign "Developer ID Installer" --package-path build --resources ./resources ./360ControllerInstaller.pkg
+
+open ./360ControllerInstaller.pkg
+

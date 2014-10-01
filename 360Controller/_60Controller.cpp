@@ -102,7 +102,10 @@ bool Xbox360Peripheral::SendSwitch(bool sendOut)
 	if (device->DeviceRequest(&controlReq, 100, 100, NULL) == kIOReturnSuccess)
         return true;
     IOLog("start - failed to %s chatpad setting\n", sendOut ? "write" : "read");
-    return false;
+    // Testing to see if I ignore the failure on the chatpad thing
+    // third party devices seem to be puking.
+    // return false;
+    return true;
 }
 
 void Xbox360Peripheral::SendToggle(void)
@@ -329,7 +332,7 @@ bool Xbox360Peripheral::start(IOService *provider)
         UInt16 release = device->GetDeviceRelease();
         switch (release) {
             default:
-                IOLog("Unknown device release %.4x", release);
+                IOLog("Unknown device release %.4x\n", release);
                 // fall through
             case 0x0110:
                 chatpadInit[0] = 0x01;
@@ -383,7 +386,7 @@ bool Xbox360Peripheral::start(IOService *provider)
 	intf.bAlternateSetting = kIOUSBFindInterfaceDontCare;
 	serialIn = device->FindNextInterface(NULL, &intf);
 	if (serialIn == NULL) {
-		IOLog("start - unable to find chatpad interface\n");
+		IOLog("start - unable to find chatpad interface. Nonfatal, proceeding without it.\n");
         goto nochat;
     }
 	serialIn->open(this);
@@ -440,9 +443,9 @@ bool Xbox360Peripheral::start(IOService *provider)
 nochat:
     if (!QueueRead())
 		goto fail;
-    // Disable LED
+    // Set LED
     Xbox360_Prepare(led,outLed);
-    led.pattern=ledOff;
+    led.pattern=ledOn1; // this should really depend on how many devices we see, but realistically who has more than 1?
     QueueWrite(&led,sizeof(led));
     // Done
 	PadConnect();
