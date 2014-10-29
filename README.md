@@ -7,7 +7,7 @@ Project repo: https://github.com.io/sluzynsk/360Controller
 More info at: http://www.luzynski.com
 Download link: http://www.luzynski.com/downloads/360ControllerInstaller.pkg
 
-## Current release: 1.0.0d13 - beta 2 for Yosemite 10.10.
+## Current release: 1.0.0d14 - beta 2 for Yosemite 10.10.
 This probably only works on Yosemite. I don't have an older machine to try it on. Sorry.
 
 As of Beta 2: 
