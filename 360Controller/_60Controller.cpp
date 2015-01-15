@@ -248,11 +248,16 @@ void Xbox360Peripheral::readSettings(void)
     if(value!=NULL) relativeLeft=value->getValue();
     value=OSDynamicCast(OSBoolean,dataDictionary->getObject("RelativeRight"));
     if(value!=NULL) relativeRight=value->getValue();
+    value=OSDynamicCast(OSBoolean,dataDictionary->getObject("LeftSwapXY"));
+    if(value!=NULL) leftSwapped=value->getValue();
+    value=OSDynamicCast(OSBoolean,dataDictionary->getObject("RightSwapXY"));
+    if(value!=NULL) rightSwapped=value->getValue();
     
-    IOLog("Xbox360Peripheral preferences loaded:\n  invertLeft X: %s, Y: %s\n   invertRight X: %s, Y:%s\n  deadzone Left: %d, Right: %d\n\n",
+    IOLog("Xbox360Peripheral preferences loaded:\n  invertLeft X: %s, Y: %s\n   invertRight X: %s, Y:%s\n  deadzone Left: %d, Right: %d\nLeft Swapped: %s, Right Swapped: %s\n\n",
             invertLeftX?"True":"False",invertLeftY?"True":"False",
             invertRightX?"True":"False",invertRightY?"True":"False",
-            deadzoneLeft,deadzoneRight);
+            deadzoneLeft,deadzoneRight,
+            leftSwapped?"True":"False", rightSwapped?"True":"False");
     
 }
 
@@ -277,6 +282,7 @@ bool Xbox360Peripheral::init(OSDictionary *propTable)
     invertRightX=invertRightY=FALSE;
     deadzoneLeft=deadzoneRight=0;
     relativeLeft=relativeRight=FALSE;
+    leftSwapped=rightSwapped=FALSE;
     // Done
     return res;
 }
@@ -638,6 +644,16 @@ void Xbox360Peripheral::fiddleReport(IOBufferMemoryDescriptor *buffer)
             if(getAbsolute(report->right.x)<deadzoneRight) report->right.x=0;
             if(getAbsolute(report->right.y)<deadzoneRight) report->right.y=0;
         }
+    }
+    if(leftSwapped) {
+        int tmp = report->left.x;
+        report->left.x = report->left.y;
+        report->left.y = tmp;
+    }
+    if(rightSwapped){
+        int tmp = report->right.x;
+        report->right.x = report->right.y;
+        report->right.y = tmp;
     }
 }
 

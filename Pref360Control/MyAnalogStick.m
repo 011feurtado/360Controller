@@ -35,6 +35,7 @@
         y=0;
         pressed=FALSE;
         linked=FALSE;
+        swapped=FALSE;
 	}
 	return self;
 }
@@ -127,6 +128,12 @@
 - (void)setLinked:(BOOL)linkedState
 {
     linked=linkedState;
+    [self setNeedsDisplay:YES];
+}
+
+-(void)setSwapped:(BOOL)swappedState
+{
+    swapped=swappedState;
     [self setNeedsDisplay:YES];
 }
 

@@ -239,6 +239,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [rightStickInvertX setEnabled:enable];
     [rightStickInvertY setEnabled:enable];
     [rightLinked setEnabled:enable];
+    [leftSwapXY setEnabled:enable];
+    [rightSwapXY setEnabled:enable];
 }
 
 // Reset GUI components
@@ -274,6 +276,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     [rightStickDeadzone setIntValue:0];
     [rightStickInvertX setState:NSOffState];
     [rightStickInvertY setState:NSOffState];
+    [leftSwapXY setState:NSOffState];
+    [rightSwapXY setState:NSOffState];
     // Disable inputs
     [self inputEnable:NO];
     [powerOff setHidden:YES];
@@ -446,6 +450,12 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
             if(CFDictionaryGetValueIfPresent(dict,CFSTR("InvertLeftY"),(void*)&boolValue)) {
                 [leftStickInvertY setState:CFBooleanGetValue(boolValue)?NSOnState:NSOffState];
             } else NSLog(@"No value for InvertLeftY");
+            if(CFDictionaryGetValueIfPresent(dict,CFSTR("LeftSwapXY"),(void*)&boolValue)) {
+                [leftSwapXY setState:CFBooleanGetValue(boolValue)?NSOnState:NSOffState];
+            } else NSLog(@"No value for leftSwapXY");
+            if(CFDictionaryGetValueIfPresent(dict,CFSTR("RightSwapXY"),(void*)&boolValue)) {
+                [rightSwapXY setState:CFBooleanGetValue(boolValue)?NSOnState:NSOffState];
+            } else NSLog(@"No value for rightSwapXY");
             if(CFDictionaryGetValueIfPresent(dict,CFSTR("RelativeLeft"),(void*)&boolValue)) {
                 BOOL enable=CFBooleanGetValue(boolValue);
                 [leftLinked setState:enable?NSOnState:NSOffState];
@@ -649,8 +659,8 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
 - (void)changeSetting:(id)sender
 {
     CFDictionaryRef dict;
-    CFStringRef keys[8];
-    CFTypeRef values[8];
+    CFStringRef keys[10];
+    CFTypeRef values[10];
     UInt16 i;
     
     // Set keys and values
@@ -672,6 +682,10 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     values[6]=([leftLinked state]==NSOnState)?kCFBooleanTrue:kCFBooleanFalse;
     keys[7]=CFSTR("RelativeRight");
     values[7]=([rightLinked state]==NSOnState)?kCFBooleanTrue:kCFBooleanFalse;
+    keys[8]=CFSTR("LeftSwapXY");
+    values[8]=([leftSwapXY state]==NSOnState)?kCFBooleanTrue:kCFBooleanFalse;
+    keys[9]=CFSTR("RightSwapXY");
+    values[9]=([rightSwapXY state]==NSOnState)?kCFBooleanTrue:kCFBooleanFalse;
     // Create dictionary
     dict=CFDictionaryCreate(NULL,(const void**)keys,(const void**)values,sizeof(keys)/sizeof(keys[0]),&kCFTypeDictionaryKeyCallBacks,&kCFTypeDictionaryValueCallBacks);
     // Set property
@@ -690,11 +704,6 @@ static void callbackHandleDevice(void *param,io_iterator_t iterator)
     // Ideally, this function would make a note of the controller's Location ID, then
     // reselect it when the list is updated, if it's still in the list.
     [self updateDeviceList];
-}
-
-- (IBAction)showDeviceList:(id)sender
-{
-    [deviceLister showWithOwner:self];
 }
 
 - (IBAction)powerOff:(id)sender

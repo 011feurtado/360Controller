@@ -99,6 +99,7 @@ protected:
     bool invertRightX,invertRightY;
     short deadzoneLeft,deadzoneRight;
     bool relativeLeft,relativeRight;
+    bool leftSwapped,rightSwapped;
 
 public:
     // this is from the IORegistryEntry - no provider yet
