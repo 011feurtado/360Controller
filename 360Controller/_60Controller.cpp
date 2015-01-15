@@ -451,7 +451,10 @@ nochat:
 		goto fail;
     // Set LED
     Xbox360_Prepare(led,outLed);
-    led.pattern=ledOn1; // this should really depend on how many devices we see, but realistically who has more than 1?
+    // this should really depend on how many devices we see
+    // right now all attached devices will show position 1
+    // need to figure out how to make it write the correct light
+    led.pattern=ledOn1;
     QueueWrite(&led,sizeof(led));
     // Done
 	PadConnect();
